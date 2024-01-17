@@ -22,6 +22,8 @@ go.work
 
 # Enviromental folder
 .idea
-
 .DS_Store
 
+# Stuff folders
+broker-service/brokerApp
+front-end/frontApp
