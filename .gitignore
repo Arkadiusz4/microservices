@@ -23,7 +23,10 @@ go.work
 # Enviromental folder
 .idea
 .DS_Store
+.env
 
 # Stuff folders
 broker-service/brokerApp
 front-end/frontApp
+authentication-service/authApp
+db-data
