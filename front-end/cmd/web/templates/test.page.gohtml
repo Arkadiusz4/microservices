@@ -49,7 +49,7 @@
                 received.innerHTML = JSON.stringify(data, undefined, 4);
 
                 if (data.error) {
-                    console.log(data.message)
+                    console.log(data.message);
                 } else {
                     output.innerHTML += `<br><strong>Response from broker service</strong>: ${data.message}`;
                 }
@@ -64,12 +64,12 @@
                 action: "auth",
                 auth: {
                     email: "admin@example.com",
-                    password: "verysecret!"
+                    password: "verysecret!",
                 }
             }
 
-            const headers = new Headers()
-            headers.append("Content-Type", "application/json")
+            const headers = new Headers();
+            headers.append("Content-Type", "application/json");
 
             const body = {
                 method: 'POST',
