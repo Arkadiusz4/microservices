@@ -3,7 +3,7 @@ version: '3'
 services:
   broker-service:
     build:
-      dockerfile: docker/authentication-service/Dockerfile
+      dockerfile: docker/broker-service/Dockerfile
     restart: always
     ports:
       - "8080:80"
