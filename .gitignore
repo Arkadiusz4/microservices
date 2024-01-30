@@ -29,4 +29,5 @@ go.work
 broker-service/brokerApp
 front-end/frontApp
 authentication-service/authApp
+logger-service/loggerServiceApp
 db-data
