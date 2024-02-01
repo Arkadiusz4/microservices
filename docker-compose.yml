@@ -31,6 +31,23 @@ services:
       mode: replicated
       replicas: 1
 
+  mail-service:
+    build:
+      dockerfile: docker/mail-service/Dockerfile
+    restart: always
+    deploy:
+      mode: replicated
+      replicas: 1
+    environment:
+      MAIL_DOMAIN: localhost
+      MAIL_HOST: mailhog
+      MAIL_PORT: 1025
+      MAIL_ENCRYPTION: none
+      MAIL_USERNAME: ""
+      MAIL_PASSWORD: ""
+      FROM_NAME: "John Smith"
+      FROM_ADDRESS: john.smith@example.com
+
   postgres:
     image: 'postgres:latest'
     ports:
