@@ -31,4 +31,5 @@ front-end/frontApp
 authentication-service/authApp
 logger-service/loggerServiceApp
 mail-service/mailServiceApp
+listener-service/listenerApp
 db-data
