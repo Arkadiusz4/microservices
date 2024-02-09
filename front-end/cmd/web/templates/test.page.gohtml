@@ -50,7 +50,7 @@
                 method: 'POST'
             }
 
-            fetch("http:\/\/localhost:8080", body).then((response) => response.json()).then((data) => {
+            fetch({{.BrokerURL}}, body).then((response) => response.json()).then((data) => {
                 sent.innerHTML = "empty post request";
                 received.innerHTML = JSON.stringify(data, undefined, 4);
 
@@ -83,7 +83,7 @@
                 headers: headers,
             }
 
-            fetch("http:\/\/localhost:8080/handle", body).then((response) => response.json()).then((data) => {
+            fetch({{print .BrokerURL "/handle"}}, body).then((response) => response.json()).then((data) => {
                 sent.innerHTML = JSON.stringify(payload, undefined, 4);
                 received.innerHTML = JSON.stringify(data, undefined, 4);
 
@@ -115,7 +115,7 @@
                 headers: headers,
             }
 
-            fetch("http:\/\/localhost:8080/handle", body).then((response) => response.json()).then((data) => {
+            fetch({{print .BrokerURL "/handle"}}, body).then((response) => response.json()).then((data) => {
                 sent.innerHTML = JSON.stringify(payload, undefined, 4);
                 received.innerHTML = JSON.stringify(data, undefined, 4);
 
@@ -149,7 +149,7 @@
                 headers: headers,
             }
 
-            fetch("http:\/\/localhost:8080/handle", body).then((response) => response.json()).then((data) => {
+            fetch({{print .BrokerURL "/handle"}} , body).then((response) => response.json()).then((data) => {
                 sent.innerHTML = JSON.stringify(payload, undefined, 4);
                 received.innerHTML = JSON.stringify(data, undefined, 4);
 
@@ -181,7 +181,7 @@
                 headers: headers,
             }
 
-            fetch("http:\/\/localhost:8080/log-grpc", body).then((response) => response.json()).then((data) => {
+            fetch({{print .BrokerURL "/log-grpc"}}, body).then((response) => response.json()).then((data) => {
                 sent.innerHTML = JSON.stringify(payload, undefined, 4);
                 received.innerHTML = JSON.stringify(data, undefined, 4);
 
