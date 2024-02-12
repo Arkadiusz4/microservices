@@ -13,7 +13,7 @@ spec:
         app: mail-service
     spec:
       containers:
-        - name: mongo
+        - name: mail
           image: "arkadiusz4/mail-service:1.0.0"
           resources:
             requests:
