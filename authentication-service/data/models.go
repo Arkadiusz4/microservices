@@ -18,7 +18,8 @@ type PostgresRepository struct {
 	Conn *sql.DB
 }
 
-func NewPostgresRepository(db *sql.DB) *PostgresRepository {
+func NewPostgresRepository(pool *sql.DB) *PostgresRepository {
+	pool = db
 	return &PostgresRepository{
 		Conn: db,
 	}
